@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Sign Up  </title>
+        <meta name="description" content="Photography WebsiteS.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="member.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+         <!-- JAVA SCRIPT FOR THE VALIDATION OF THE FORM -->
+        <script>
+        
+            function validate()
+            {
+               if( document.form.username.value == "" )
+	               {
+		              alert( "Please provide your name!" );
+
+		      document.form.username.focus() ;
+
+		      return false;
+	       }
+                
+	       if( document.form.password.value == "" )
+	           {
+		          alert( "Please provide your password!" );
+
+		          document.form.password.focus() ;
+
+		          return false;
+	           }
+         
+
+            document.form.password.value.length == 8
+            if( document.form.password.value.length < 8 )
+                   {
+                       alert( "enter atleast 8 characters for your password!" );
+
+                       document.form.password.focus() ;
+
+                       return false;
+                   }
+
+
+            if( document.form.password.value != document.form.password2.value )
+                   {
+                       alert( "Password doesnot match" );
+
+                       document.form.password.focus() ;
+
+                       return false;
+                   }
+
+
+                }
+        </script>
+    </head>
+    
+    <body>
+        <!-- HEADER AND NAVIGATION-->
+        <header class="headerother">
+           <div class="row">
+               <div class="logo">
+                   <a href="home.htm">
+                       <img src="logo.png" alt="logo" >
+                   </a>
+                   <p> 
+                       ELEVEN NOTES STUDIO
+                   </p>
+               </div>
+               
+                <ul class="main-nav">
+                   <li ><a href="home.htm"> HOME</a></li>
+                    <li><a href="gallery.htm"> GALLERY</a></li>
+                    <li><a href="aboutus.htm">ABOUT US</a></li>
+                    <li><a href="rates.htm"> RATES</a></li>
+                    <li><a href="member.htm"> BE A MEMBER</a> </li>
+                </ul>
+            </div>
+        </header>
+        
+        <!-- A LOGIN BOX AND SIGN UP BOX  -->
+        <div class="login-box">
+            
+             <!-- A LOGIN BOX-->
+            <div class="left-box">
+                <div class="container"  onsubmit="return validate();">
+                    <form  name="form" method="post">
+                        <h1> Sign Up</h1>
+                        <input type="text" name="username" placeholder="username"/>
+                        <input type="text" name="email" placeholder="Email"/>
+                        <input type="password" name="password" placeholder="Password"/>
+                        <input type="password" name="password2" placeholder="Retype Password"/>
+                        <input type="submit" name="signup-button"  value="Sign Up"/>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- A SIGN UP BOX-->
+            <div class="right-box">
+                <span class="signinwith">Sign in with<br/>Social Network</span>
+                <a href="https://www.facebook.com/" class="social facebook">Log in with Facebook</a>  <br>
+                <a href="https://www.twitter.com/" class="social twitter">Log in with Twitter</a><br>
+                <a href="https://www.gmail.com/"  class="social google">Log in with Google+</a><br> 
+            </div> 
+            
+            <!-- FOR DIFFERENTIATING TWO BOXES-->
+            <div class="OR">
+                OR
+            </div>
+        </div>
+        
+        <!-- FOOTER -->
+        <div class="footer-main-div">
+            <div class="footer-social-icons">
+                <ul>
+                    <li> <a href="https://www.facebook.com/" target="_blank"> <img src="ifb.png" alt="facebook icon"></a></li>
+                    <li> <a href="https://www.twitter.com/" target="_blank"> <img src="itw.png" alt="twitter icon"></a></li>
+                    <li> <a href="https://www.youtube.com/" target="_blank"> <img src="iyt.png" alt="youtube icon"></a></li>
+                    <li> <a href="https://www.instagram.com/" target="_blank"> <img src="iins.jpg" alt="instagram icon"></a></li>
+                </ul>     
+            </div>
+            <p style="text-align:center;color:white; font-size: 15px; padding-top: 5px;">
+                If you have any queries, <a  href="mailto:smritimdr@gmail.com"> E-Mail me!</a>
+                <br>
+                Kathmandu, Nepal | PO-Box: 1234 <br>
+                11Notes&copy; 2018
+            </p>   
+        </div>
+    </body>
+</html>
